@@ -23,7 +23,6 @@ public class Project {
     @Column(nullable = false)
     private String name;
     private String description;
-    @CreationTimestamp
     @Column(nullable = false, updatable = false)
     private LocalDateTime createdAt;
 

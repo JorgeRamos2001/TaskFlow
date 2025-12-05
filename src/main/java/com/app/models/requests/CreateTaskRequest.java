@@ -12,7 +12,5 @@ public record CreateTaskRequest(
         @NotBlank( message = "Description is required")
         String description,
         @NotBlank( message = "Priority is required")
-        TaskPriority priority,
-        @NotNull( message = "Project Id is required")
-        UUID projectId
+        String priority
 ) {}

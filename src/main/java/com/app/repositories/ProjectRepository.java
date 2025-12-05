@@ -13,5 +13,5 @@ import java.util.UUID;
 public interface ProjectRepository extends JpaRepository<Project, Long> {
     Optional<Project> findById(UUID id);
     List<Project> findAllByUser(User user);
-    List<Project> findAllByNameContainingIgnoreCase(String name);
+    List<Project> findAllByUserAndNameContainingIgnoreCase(User user, String name);
 }

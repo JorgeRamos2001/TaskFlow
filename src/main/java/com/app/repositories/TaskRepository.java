@@ -19,4 +19,5 @@ public interface TaskRepository extends JpaRepository<Task, Long> {
     List<Task> findAllByProjectAndPriority(Project project, TaskPriority priority);
     List<Task> findAllByProjectAndTitleContainingIgnoreCase(Project project, String title);
     List<Task> findAllByProjectAndState(Project project, TaskState state);
+    void deleteAllByProject(Project project);
 }
